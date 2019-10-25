@@ -1,0 +1,35 @@
+langauge: java
+addons:
+  apt:
+    update: true
+    packages:
+      # LaTeX decent font processor
+      - cm-super
+      # For Minted
+      - python-pygments
+      # LaTeX
+      - texlive-base
+      - texlive-extra-utils
+      - texlive-generic-recommended
+      - texlive-latex-extra
+      - texlive-latex-recommended
+      - texlive-fonts-recommended
+      - texlive-science
+      # Debug
+      - tree
+      # For git latexdiff
+      - latexdiff
+      # Image processing
+      - inkscape
+script: ./gradlew buildLatex
+before_deploy:
+  - git config --local user.name "Danilo Pianini"
+  - git config --local user.email "danilo.pianini@unibo.it"
+  - if [[ $(git describe) == *"-"* ]]; then git tag $(git describe) || :; fi
+before_cache:
+  - curl "${GRAVIS}.clean_gradle_cache.sh" --output .clean_gradle_cache.sh
+  - bash .clean_gradle_cache.sh
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
