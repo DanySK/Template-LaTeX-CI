@@ -9,3 +9,4 @@ latex.pdf
 .idea/
 .ide/
 .gradle/
+*.kate-swp
