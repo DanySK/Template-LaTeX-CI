@@ -23,6 +23,7 @@ addons:
       - latexdiff
       # Image processing
       - inkscape
+install: true
 script: ./gradlew buildLatex
 before_deploy:
   - git config --local user.name "Danilo Pianini"
