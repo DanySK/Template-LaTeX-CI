@@ -1,6 +1,6 @@
 official-repo: &official-repo
   DanySK/Template-LaTeX-CI
-langauge: java
+language: java
 addons:
   apt:
     update: true
