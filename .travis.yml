@@ -17,6 +17,7 @@ addons:
       - texlive-latex-recommended
       - texlive-fonts-recommended
       - texlive-science
+      - texlive-publishers
       # Debug
       - tree
       # For git latexdiff
