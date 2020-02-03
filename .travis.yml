@@ -7,23 +7,25 @@ addons:
     packages:
       # LaTeX decent font processor
       - cm-super
+      # Image processing
+      - inkscape
+      # For git latexdiff
+      - latexdiff
       # For Minted
       - python-pygments
       # LaTeX
       - texlive-base
+      - texlive-bibtex-extra
       - texlive-extra-utils
+      - texlive-fonts-recommended
+      - texlive-fonts-extra
       - texlive-generic-recommended
       - texlive-latex-extra
       - texlive-latex-recommended
-      - texlive-fonts-recommended
-      - texlive-science
       - texlive-publishers
+      - texlive-science
       # Debug
       - tree
-      # For git latexdiff
-      - latexdiff
-      # Image processing
-      - inkscape
 env:
   global:
     - TERM=dumb
