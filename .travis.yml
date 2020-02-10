@@ -35,18 +35,22 @@ env:
 
 before_install:
   - travis_retry git clone --depth 1 $GRAVIS_REPO $GRAVIS
+  - source $GRAVIS/install-jdk
 
 script: ./gradlew buildLatex
+
 before_deploy:
   - git config --local user.name "Danilo Pianini"
   - git config --local user.email "danilo.pianini@unibo.it"
   - $GRAVIS/autotag
+
 before_cache:
   - $GRAVIS/clean-gradle-cache
 cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+
 deploy:
   - provider: releases
     api_key:
