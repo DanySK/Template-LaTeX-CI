@@ -5,6 +5,7 @@ if: repo != head_repo AND tag !~ /^[\w\.]+-\d+-\w+/
 official-repo: &official-repo
   DanySK/Template-LaTeX-CI
 language: minimal
+dist: focal
 addons:
   apt:
     update: true
