@@ -31,7 +31,7 @@ env:
     - GRAVIS_REPO="https://github.com/DanySK/Gravis-CI.git"
     - GRAVIS="$HOME/gravis"
 
-install: true
+install: travis_retry git clone --depth 1 $GRAVIS_REPO $GRAVIS
 script: ./gradlew buildLatex
 
 before_deploy:
