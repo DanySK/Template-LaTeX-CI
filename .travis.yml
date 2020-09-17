@@ -1,5 +1,6 @@
 # Do not double-build branches and PRs from this repo
-if: repo != head_repo
+# Do not build auto-tagged versions
+if: repo != head_repo AND tag !~ /^[\w\.]+-\d+-\w+/
 
 official-repo: &official-repo
   DanySK/Template-LaTeX-CI
