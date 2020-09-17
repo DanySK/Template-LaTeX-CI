@@ -19,16 +19,7 @@ addons:
       # For Minted
       - python-pygments
       # LaTeX
-      - texlive-base
-      - texlive-bibtex-extra
-      - texlive-extra-utils
-      - texlive-fonts-recommended
-      - texlive-fonts-extra
-      - texlive-generic-recommended
-      - texlive-latex-extra
-      - texlive-latex-recommended
-      - texlive-publishers
-      - texlive-science
+      - texlive-full
       # Debug
       - tree
 env:
