@@ -4,7 +4,7 @@ if: repo != head_repo AND tag !~ /^[\w\.]+-\d+-\w+/
 
 official-repo: &official-repo
   DanySK/Template-LaTeX-CI
-language: minimal
+language: java
 dist: focal
 addons:
   apt:
@@ -30,11 +30,6 @@ env:
     - TERM=dumb
     - GRAVIS_REPO="https://github.com/DanySK/Gravis-CI.git"
     - GRAVIS="$HOME/gravis"
-    - JDK="adopt@1.11"
-
-before_install:
-  - travis_retry git clone --depth 1 $GRAVIS_REPO $GRAVIS
-  - source $GRAVIS/install-jdk
 
 script: ./gradlew buildLatex
 
