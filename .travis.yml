@@ -19,7 +19,10 @@ addons:
       # For Minted
       - python-pygments
       # LaTeX
-      - texlive-full
+      - texlive
+      - texlive-latex-extra
+      - texlive-publishers
+      - texlive-science
       # Debug
       - tree
 env:
