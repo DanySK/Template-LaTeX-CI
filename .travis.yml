@@ -37,7 +37,6 @@ before_deploy:
   - git config --local user.name "Danilo Pianini"
   - git config --local user.email "danilo.pianini@unibo.it"
   - $GRAVIS/autotag
-  - export TRAVIS_TAG="true"
 
 deploy:
   - provider: releases
