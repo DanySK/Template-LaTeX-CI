@@ -15,6 +15,7 @@ The file being built is a LaTeX quick reference by [Mark Gates](http://www.icl.u
 2. Delete existing tex files and add yours
 3. Configure the build inside `build.gradle.kts` following instructions on [https://github.com/DanySK/gradle-latex](https://github.com/DanySK/gradle-latex)
 4. Test your build locally by `./gradlew buildLatex`
+3. Update the `.gitignore` file ignoring the generated files
 6. Modify the `token` entry in the `deployment` section of `.travis.yml`, following [the instructions for deployment on GitHub releases provided by Travis](https://docs.travis-ci.com/user/deployment/releases/).
 7. Enable your repo on Travis CI (if you are using .org, otherwise it should get built automatically from start)
 8. Just write, commit, and push, and in few minutes your files will be automagically available on GitHub.
