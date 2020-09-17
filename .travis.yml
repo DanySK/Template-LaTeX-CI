@@ -58,7 +58,8 @@ deploy:
     file: "*.pdf"
     on:
       repo: *official-repo
-      tags: true
+      all_branches: true
+      condition: true
 
 notifications:
   email:
