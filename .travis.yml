@@ -30,12 +30,23 @@ env:
     - GRAVIS="$HOME/gravis"
 
 install: travis_retry git clone --depth 1 $GRAVIS_REPO $GRAVIS
-script: ./gradlew buildLatex
+
+script:
+  - chmod +x gradlew
+  - ./gradlew buildLatex
+
+after_success:
+  - git config --local user.name "Danilo Pianini's Travis CI automation bot"
+  - git config --local user.email "danilo.pianini@unibo.it"
 
 before_deploy:
-  - git config --local user.name "Danilo Pianini"
-  - git config --local user.email "danilo.pianini@unibo.it"
   - $GRAVIS/autotag
+
+after_script:
+  - git checkout master
+  - git add gradlew
+  - git commit -m "[ci skip] [automatic] Make gradlew executable again"
+  - git push "git@github.com:${TRAVIS_REPO_SLUG}.git" master
 
 deploy:
   - provider: releases
