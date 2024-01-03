@@ -1,6 +1,6 @@
 # LaTeX template repository with continuous integration  
 
-[![Build Status](https://travis-ci.org/DanySK/Template-LaTeX-CI.svg?branch=master)](https://travis-ci.org/DanySK/Template-LaTeX-CI)
+[![Build LaTeX and deploy on GitHub Releases](https://github.com/DanySK/Template-LaTeX-CI/actions/workflows/build-and-deploy-latex.yml/badge.svg)](https://github.com/DanySK/Template-LaTeX-CI/actions/workflows/build-and-deploy-latex.yml)
 
 This repository is meant to be used as template for quickly starting LaTeX projects,
 having them built on a continuous integrator, and having them quickly deployed in GitHub releases.
