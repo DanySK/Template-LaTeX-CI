@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Setup-Compile-Deploy:
+  success:
     runs-on: ubuntu-latest
     steps:
       - uses: DanySK/compile-and-publish-all-latex@1.0.70
