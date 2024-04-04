@@ -16,3 +16,4 @@ _minted*/
 *.snm
 *.vrb
 build/
+out/
